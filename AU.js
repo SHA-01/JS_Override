@@ -277,7 +277,7 @@ class Bot {
         msg = this.Buffer(msg.data, true);
 
         if (this.decryptionKey) msg = this.xorBuffer(msg, this.decryptionKey ^ this.protocolKey);
-         console.log(msg.getUint8(offset++))
+         console.log(msg.getUint8(offset))
         switch (msg.getUint8(offset++)) {
 
             case 241:
